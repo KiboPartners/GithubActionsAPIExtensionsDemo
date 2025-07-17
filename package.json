@@ -1,0 +1,17 @@
+{
+  "name": "hmgithubactionsdemo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "update-extensions": "node update-api-extensions.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "dotenv": "^17.2.0",
+    "mozu-node-sdk": "^2.15.14"
+  }
+}

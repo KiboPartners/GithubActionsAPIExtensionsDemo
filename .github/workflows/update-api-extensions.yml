@@ -1,0 +1,35 @@
+name: Update API Extensions
+
+on:
+  push:
+    branches:
+      - '**'
+    paths:
+      - 'api-extensions-config.json'
+  workflow_dispatch:
+
+jobs:
+  update-extensions:
+    runs-on: ubuntu-latest
+    environment: Demo Tenant
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        
+    - name: Install dependencies
+      run: npm ci
+      
+    - name: Update API Extensions
+      env:
+        appKey: ${{ secrets.APP_KEY }}
+        sharedSecret: ${{ secrets.SHARED_SECRET }}
+        tenant: ${{ secrets.TENANT }}
+        site: ${{ secrets.SITE }}
+        baseUrl: ${{ secrets.BASE_URL }}
+      run: node update-api-extensions.js
