@@ -8,7 +8,7 @@
                         {
                             "applicationKey": "nsoerjnu.fulfillmenteapiextensions.1.0.0.Release",
                             "functionId": "http.commerce.fulfillment.createShipments.before",
-                            "enabled": true
+                            "enabled": false
                         }
                     ]
                 }
@@ -16,5 +16,5 @@
         }
     ],
     "configurations": [],
-    "defaultLogLevel": "Info"
+    "defaultLogLevel": "Error"
 }
