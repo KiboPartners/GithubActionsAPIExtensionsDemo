@@ -16,5 +16,5 @@
         }
     ],
     "configurations": [],
-    "defaultLogLevel": "Info"
+    "defaultLogLevel": "Error"
 }
